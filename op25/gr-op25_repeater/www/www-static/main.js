@@ -2098,12 +2098,20 @@ function full_config(config) {
             if (typeof value === 'object' && value !== null) {
                 html += `<td class="config-value" style="color:#ddd;">${formatEntry(value)}</td>`;
             } else {
-                html += `<td class="config-value">${value}</td>`;
+                html += `<td class="config-value">${formatValue(displayKey, value)}</td>`;
             }
             html += '</tr>';
         }
         html += '</table>';
         return html;
+    }
+
+    function formatValue(key, value) {
+        if (typeof value === 'number' && key.toLowerCase().includes('frequency')) {
+            const mhz = (value / 1e6).toFixed(6).replace(/\.?0+$/, '');
+            return `${value} (${mhz} MHz)`;
+        }
+        return value;
     }
 
     // Top level keys
