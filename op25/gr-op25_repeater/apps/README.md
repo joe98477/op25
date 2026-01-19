@@ -13,6 +13,13 @@ NOTE 1: For phase1 voice the `-V` option is not used.  Instead the `-w` option i
 
 NOTE 2: For systems with a TDMA control channel the `--tdma-cc` option is required.
 
+## Bundled CFA example configurations
+
+The following configuration files are bundled in this directory to make it easier to swap between a trunked CFA system and simplex CFA fireground channels in the web UI:
+
+- `cfa_district_23.json`: trunked CFA District 23 example with the SDR, audio, and UDP destination settings already wired.
+- `cfa_fireground_channels.json`: simplex P25 Phase 2 fireground channels derived from `cfa_fireground_channels.csv` using the same SDR, audio, and UDP settings.
+
 ## Terminal Operation
 
 After starting `rx.py` if plotting is in use a separate gnuplot window should open.  You must click on the terminal window to restore it to focus, otherwise all keystrokes are consumed by gnuplot.  Once in the terminal window there are several keyboard commands:
@@ -218,4 +225,3 @@ Options:
 ## Encryption
 
 P25 ADP/RC4 (algid `0xAA`), DES-OFB (algid `0x81`) and AES-OFB (algid `0x84`) decryption with a known key is now supported by `multi_rx.py`.  See the example configurations: `p25_rtl_example.json`, `p25_conventional_example.json` and also the example json formatting of the keys file: `example_keys.json`.
-

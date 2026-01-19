@@ -18,3 +18,5 @@ op25_python
 !trunk.tsv
 !cfg.json
 !meta.json
+!cfa_district_23.json
+!cfa_fireground_channels.json
