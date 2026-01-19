@@ -11,7 +11,7 @@ There are many refinements which should be made to these instructions, particula
 ```
 sudo apt-get install git
 cd ~
-git clone https://github.com/boatbod/op25
+git clone https://github.com/joe98477/op25
 cd op25
 ./install.sh 
 ```
